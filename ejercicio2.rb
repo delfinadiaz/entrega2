@@ -5,7 +5,7 @@ Class Purchase
       productos=Array.new
   end
   def add prod
-      productos[length]= prod
+      productos.push(prod)
   end 
   def total 
     sum= productos.inject {0} {|prod, num | prod.precio + num}
