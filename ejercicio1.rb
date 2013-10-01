@@ -1,5 +1,5 @@
 # encoding: utf-8
-Class Animal
+class Animal
   def initialize (nom)
     @nombre=nom
   end
@@ -11,7 +11,7 @@ Class Animal
   end
 end
 
-Class Mamifero < Animal
+class Mamifero < Animal
   def ladrar
     puts 'ladra'
   end
@@ -20,12 +20,13 @@ Class Mamifero < Animal
   end
 end
 
-Class Ave < Animal
+class Ave < Animal
   def volar
     puts 'vuela'
   end
 end
-Class Reptil < Animal
+
+class Reptil < Animal
   def desplazarse
     puts 'se desplaza'
   end
@@ -37,7 +38,7 @@ Class Reptil < Animal
   end
 end
 
-Class Anfibio < Animal 
+class Anfibio < Animal 
   def saltar
     puts 'salta'
   end
@@ -45,25 +46,26 @@ Class Anfibio < Animal
     puts 'Este animal no es capaz de caminar'
   end
 end
-Class Pez < Animal
+
+class Pez < Animal
   def caminar
     puts 'Este animal no es capaz de caminar'
   end
 end
 
-Class Persona < Mamifero
+class Persona < Mamifero
   def ladrar  
     puts 'Este animal no es capaz de ladrar'
   end
 end
 
-Class Perro < Mamifero
+class Perro < Mamifero
   def hablar
     puts 'Este animal no es capaz de hablar'
   end
 end
 
-Class Ballena < Mamifero
+class Ballena < Mamifero
   def hablar
     puts 'Este animal no es capaz de hablar'
   end
@@ -74,18 +76,20 @@ Class Ballena < Mamifero
     puts 'Este animal no es capaz de caminar'
   end
 end
-Class Aguila < Animal
+
+class Aguila < Animal
   def nadar
     puts 'Este animal no es capaz de nadar'
   end
 end
-Class Pinguino < Ave
+
+class Pinguino < Ave
   def volar
     puts 'Este animal no es capaz de volar'
   end
 end
 
-Class Cocodrilo < Reptil
+class Cocodrilo < Reptil
   def desplazarse
     puts 'Este animal no es capaz de desplazarse'
   end
@@ -97,7 +101,7 @@ Class Cocodrilo < Reptil
   end
 end
 
-Class Boa < Reptil
+class Boa < Reptil
   def caminar
     puts 'Este animal no es capaz de caminar'
   end
@@ -109,7 +113,7 @@ Class Boa < Reptil
   end
 end
 
-Class Cobra < Reptil
+class Cobra < Reptil
   def caminar
     puts 'Este animal no es capaz de caminar'
   end
@@ -120,10 +124,11 @@ Class Cobra < Reptil
     puts 'Este animal no es capaz de ejercer presion'
   end
 end
-Class Sapo < Anfibio
+
+class Sapo < Anfibio
 end
 
-Class Tiburon < Pez
+class Tiburon < Pez
 end
 
 per1=Persona.new "Martin"

@@ -1,22 +1,35 @@
-require 'classProducto.rb'
+# encoding: utf-8
+class Product
+  attr_accessor :name, :price, :code
+  def initialize (code, name, price)
+    @name=name
+    @price=price.to_f
+    @code=code
+  end
+end
 
-Class Purchase
+class Purchase 
+  attr_accessor :products, :total
   def initialize
-      productos=Array.new
+    @products= []
+    @total= 0
   end
-  def add prod
-      productos.push(prod)
-  end 
-  def total 
-    sum= productos.inject {0} {|prod, num | prod.precio + num}
-    puts sum
-  end 
-  def delete prod
-   productos.delete_if { |p| p.codigo= prod.codigo}
+  
+  def add (p)
+    @products << p 
   end
-  def apply_discount 
-     t=total
-     if productos.length > 10 { puts (t- t *20/100)} 
-
-  end 
+  def calculartotal
+    @total= products.reduce(0){|suma , p| suma + p.price}
+  end
+  def count
+    puts @products.length
+  end
+  def delete (p)
+    @products.delete(p)
+  end
+  def apply_discount
+    yield self
+  end
+  
+end
  
